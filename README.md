@@ -1,6 +1,6 @@
-# Northstar Analytics
+## Northstar Analytics
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue 3 in Vite Landing Page.
 
 ## Recommended IDE Setup
 
