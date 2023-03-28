@@ -2,7 +2,7 @@
 import TestimonialCarousel from "./children/TestimonialCarousel.vue";
 
 const acmeCorpLogo = new URL("../assets/images/logos/acme-corp.png", import.meta.url).href;
-const testimonyPerson = new URL("../assets/images/testimoni-pic.png", import.meta.url).href;
+const testimonyPerson = new URL("../assets/images/testimoni-pic.PNG", import.meta.url).href;
 </script>
 
 <template>

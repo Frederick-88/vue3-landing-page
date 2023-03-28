@@ -1,6 +1,6 @@
 <script setup>
-const smallCode = new URL("../assets/images/code-snippet-1.png", import.meta.url).href;
-const largeCode = new URL("../assets/images/code-snippet-2.png", import.meta.url).href;
+const smallCode = new URL("../assets/images/code-snippet-1.PNG", import.meta.url).href;
+const largeCode = new URL("../assets/images/code-snippet-2.PNG", import.meta.url).href;
 </script>
 
 <template>
