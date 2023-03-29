@@ -18,7 +18,7 @@ const getChartImage = computed(() => {
 
 <template>
   <div class="home-banner__container">
-    <div class="header">
+    <div class="header" data-aos="fade-down">
       <h1 class="title">
         <span>Analytics for</span>
         <br />
@@ -35,7 +35,7 @@ const getChartImage = computed(() => {
       <TestimonialCarousel :with-text="true" />
     </div>
 
-    <div class="chart-container">
+    <div class="chart-container" data-aos="zoom-in-up" data-aos-offset="100">
       <img class="image" :src="getChartImage" alt="chart" />
       <ul class="option-list">
         <li v-for="(item, index) in chartOptionList" :key="index" class="list-item">
@@ -134,6 +134,7 @@ const getChartImage = computed(() => {
   .testimonial {
     margin: 80px 0 140px;
     width: 100%;
+    animation: fade-down 0.5s;
   }
 
   .chart-container {
@@ -279,6 +280,17 @@ const getChartImage = computed(() => {
           display: none;
         }
       }
+    }
+  }
+
+  @keyframes fade-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-75px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
