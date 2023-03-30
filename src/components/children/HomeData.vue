@@ -9,23 +9,23 @@ const desktopIllustration = new URL("../../assets/images/desktops.png", import.m
 
 <template>
   <div class="home-data__container">
-    <h1 class="title">
+    <h1 class="title" data-aos="fade-up">
       Empower your team <br />
       with good data
     </h1>
-    <p class="subtitle">
+    <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
       We collect events from your web & mobile apps and provide <br />
       a complete data toolkit for every team in your company.
     </p>
     <div class="data-illustration">
-      <img class="desktop-image" :src="desktopIllustration" alt="desktop image" />
-      <div class="arrow-up">
+      <img class="desktop-image" :src="desktopIllustration" alt="desktop image" data-aos="fade-right" data-aos-delay="400" />
+      <div class="arrow-up" data-aos="fade-right" data-aos-delay="400">
         <ArrowUp />
       </div>
-      <div class="arrow-left">
+      <div class="arrow-left" data-aos="fade-right" data-aos-delay="400">
         <ArrowLeft />
       </div>
-      <div class="resonating-logo">
+      <div class="resonating-logo" data-aos="fade-up" data-aos-delay="200">
         <div class="logo-bg">
           <img class="logo" :src="logo" alt="logo" />
         </div>
@@ -36,10 +36,10 @@ const desktopIllustration = new URL("../../assets/images/desktops.png", import.m
           <span class="circle circle--4" />
         </div>
       </div>
-      <div class="arrow-right">
+      <div class="arrow-right" data-aos="fade-left" data-aos-delay="600">
         <ArrowRight />
       </div>
-      <div class="features-list">
+      <div class="features-list" data-aos="fade-left" data-aos-delay="600">
         <div class="list-item">
           <h3 class="item-title">Analytics</h3>
           <p class="item-subtitle">All your data in one single place.</p>
@@ -92,6 +92,7 @@ const desktopIllustration = new URL("../../assets/images/desktops.png", import.m
 
     .resonating-logo {
       position: relative;
+      z-index: 3;
 
       .logo-bg {
         position: relative;
