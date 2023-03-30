@@ -7,17 +7,17 @@ const largeCode = new URL("../assets/images/code-snippet-2.PNG", import.meta.url
   <div class="home-code__container">
     <div class="content">
       <div class="left-content">
-        <h1 class="title">
+        <h1 class="title" data-aos="zoom-in-right">
           Our features at <br />
           your
           <br class="hidden-lg" />
           <span class="peach">fingertips.</span>
         </h1>
-        <p class="subtitle">Our Client is a query builder that composes the way you think and gets auto-generated.</p>
-        <img class="image" :src="smallCode" alt="code snippet" />
+        <p class="subtitle" data-aos="zoom-in-up">Our Client is a query builder that composes the way you think and gets auto-generated.</p>
+        <img class="image" :src="smallCode" alt="code snippet" data-aos="zoom-in-up" />
       </div>
 
-      <img class="image-banner" :src="largeCode" alt="code snippet" />
+      <img class="image-banner" :src="largeCode" alt="code snippet" data-aos="zoom-in" />
     </div>
   </div>
 </template>
