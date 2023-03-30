@@ -7,9 +7,9 @@ const testimonyPerson = new URL("../assets/images/testimoni-pic.PNG", import.met
 
 <template>
   <div class="home-testimonial__container">
-    <h1 class="title">Trusted by the world’s largest companies.</h1>
+    <h1 class="title" data-aos="fade-down">Trusted by the world’s largest companies.</h1>
 
-    <div class="testimonial-box">
+    <div class="testimonial-box" data-aos="fade-down" data-aos-delay="200">
       <div class="box--left">
         <div class="content--top">
           <img class="logo" :src="acmeCorpLogo" alt="logo" />
