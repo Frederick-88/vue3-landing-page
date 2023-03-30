@@ -32,7 +32,14 @@ const pricingList = [
 
 <template>
   <div class="home-pricing__container">
-    <div v-for="(pricing, index) in pricingList" :key="index" :class="`box--${pricing.value}`" class="pricing-box">
+    <div
+      v-for="(pricing, index) in pricingList"
+      :key="index"
+      :class="`box--${pricing.value}`"
+      class="pricing-box"
+      data-aos="zoom-in-right"
+      :data-aos-delay="index * 200"
+    >
       <p class="name">{{ pricing.name }}</p>
       <p class="description">{{ pricing.description }}</p>
 
