@@ -62,7 +62,7 @@ const featureList = [
       </Carousel>
     </div>
 
-    <div class="right-content">
+    <div class="right-content" data-aos="zoom-in-up">
       <h1 class="title">
         Powerful
         <br />
