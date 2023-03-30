@@ -13,17 +13,17 @@ const techFeatures = [
 
 <template>
   <div class="home-tech__container">
-    <h1 class="title">
+    <h1 class="title" data-aos="fade-up">
       Built on powerful <br />
       <span class="pink">enterprise</span>
       <br class="hidden-xs" />
       tech.
     </h1>
-    <p class="subtitle">
+    <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
       We use the latest software to power your data. Used by the biggest enterprises today, our stack has stood the test of time.
     </p>
 
-    <div class="tech-illustration">
+    <div class="tech-illustration" data-aos="zoom-in-up" data-aos-delay="200">
       <div class="left-icons">
         <i class="icon--pink1 icon-wifi-hotspot"></i>
         <div class="flex--space-between">
@@ -56,8 +56,10 @@ const techFeatures = [
     </div>
 
     <div class="tech-features">
-      <h3 class="tech-name">Northstar 3.0</h3>
-      <p class="tech-feature-text" v-for="(text, index) in techFeatures" :key="index">{{ text }}</p>
+      <h3 class="tech-name" data-aos="fade-up" data-aos-delay="200">Northstar 3.0</h3>
+      <p class="tech-feature-text" v-for="(text, index) in techFeatures" :key="index" data-aos="fade-up" :data-aos-delay="200 * (index + 1)">
+        {{ text }}
+      </p>
     </div>
   </div>
 </template>
