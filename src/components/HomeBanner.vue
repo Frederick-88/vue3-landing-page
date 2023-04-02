@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { ref, computed } from "vue";
 import TestimonialCarousel from "./children/TestimonialCarousel.vue";
 import HomeData from "./children/HomeData.vue";
 
@@ -10,10 +10,22 @@ const chartMobile = new URL("../assets/images/chart-mobile.png", import.meta.url
 
 const chartOptionList = ["Dashboard", "Graphs", "Reports", "Real-time", "Collaboration"];
 
+const activeOption = ref("Dashboard");
+const isReloadImage = ref(false);
+
 const getChartImage = computed(() => {
   const isMobile = screen.width <= 600;
   return isMobile ? chartMobile : chartDesktop;
 });
+
+const setActiveOption = (value) => {
+  activeOption.value = value;
+  isReloadImage.value = true;
+
+  setTimeout(() => {
+    isReloadImage.value = false;
+  }, 500);
+};
 </script>
 
 <template>
@@ -36,9 +48,15 @@ const getChartImage = computed(() => {
     </div>
 
     <div class="chart-container" data-aos="zoom-in-up" data-aos-offset="100">
-      <img class="image" :src="getChartImage" alt="chart" />
+      <img class="image" :class="{ 'image--play-anim': isReloadImage }" :src="getChartImage" alt="chart" />
       <ul class="option-list">
-        <li v-for="(item, index) in chartOptionList" :key="index" class="list-item">
+        <li
+          v-for="(item, index) in chartOptionList"
+          :key="index"
+          class="list-item"
+          :class="{ 'item--active': activeOption === item }"
+          @click="setActiveOption(item)"
+        >
           {{ item }}
         </li>
       </ul>
@@ -149,6 +167,10 @@ const getChartImage = computed(() => {
       margin-bottom: 40px;
       border-radius: 10px;
       box-shadow: 0px 20px 40px 0px rgba($black, 0.25);
+
+      &.image--play-anim {
+        animation: fade-down 0.5s;
+      }
     }
 
     .option-list {
@@ -162,8 +184,16 @@ const getChartImage = computed(() => {
         font-size: 1.125rem;
         cursor: pointer;
 
+        &:hover {
+          color: $black;
+          transition: all 0.2s ease-in-out;
+        }
+
         &:first-of-type {
           margin-left: 0;
+        }
+
+        &.item--active {
           color: $purple2;
         }
       }
